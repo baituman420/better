@@ -106,6 +106,17 @@ export default {
         "headline-lg": ["2.5rem", { lineHeight: "2.875rem", letterSpacing: "-0.01em", fontWeight: "500" }],
         "display-lg": ["3.5rem", { lineHeight: "3.875rem", letterSpacing: "-0.015em", fontWeight: "400" }],
         "display-xl": ["4.5rem", { lineHeight: "4.75rem", letterSpacing: "-0.02em", fontWeight: "400" }]
+      },
+      transitionDuration: {
+        "800": "800ms",
+        "1000": "1000ms",
+        "1200": "1200ms",
+        "1500": "1500ms",
+        "2000": "2000ms"
+      },
+      transitionTimingFunction: {
+        "editorial": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "slow-ease": "cubic-bezier(0.25, 0.1, 0.25, 1)"
       }
     },
   },

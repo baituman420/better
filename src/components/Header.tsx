@@ -41,23 +41,23 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCartaModal }) => {
           : 'bg-surface/80 backdrop-blur-sm border-b border-surface-container/60 py-1'
       }`}
     >
-      <div className="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+      <div className="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
         {/* Logo Brand */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 sm:gap-4">
           <a
             href="#inicio"
             onClick={(e) => {
               e.preventDefault();
               handleNavClick("#inicio");
             }}
-            className="flex items-center gap-3 group transition-transform duration-300 hover:opacity-90 active:scale-98"
+            className="flex items-center gap-2.5 sm:gap-3 group transition-transform duration-300 hover:opacity-90 active:scale-98"
           >
             <img
               alt="BETTER Bilbao Logo"
-              className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              className="h-7 sm:h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               src={LOGO_URL}
             />
-            <span className="font-headline-sm text-headline-sm tracking-tight text-primary">
+            <span className="font-headline-sm text-lg sm:text-headline-sm tracking-tight text-primary">
               {RESTAURANT_INFO.name}
             </span>
             <span className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant font-medium hidden sm:inline-block">
@@ -85,7 +85,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCartaModal }) => {
         </nav>
 
         {/* CTA Button & Mobile Toggle */}
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <button
             type="button"
             onClick={() => {
@@ -95,7 +95,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCartaModal }) => {
                 handleNavClick("#carta");
               }
             }}
-            className="inline-flex items-center justify-center bg-primary-container text-surface hover:bg-tertiary active:scale-98 transition-all duration-200 px-5 sm:px-6 py-2.5 rounded-full font-label-md text-label-md uppercase tracking-wider shadow-[0_2px_10px_rgba(23,63,53,0.12)] hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
+            className="inline-flex items-center justify-center bg-primary-container text-surface hover:bg-tertiary active:scale-98 transition-all duration-200 px-3.5 sm:px-6 py-1.5 sm:py-2.5 rounded-full font-label-md text-xs sm:text-label-md uppercase tracking-wider shadow-[0_2px_10px_rgba(23,63,53,0.12)] hover:shadow-lg hover:-translate-y-0.5 cursor-pointer whitespace-nowrap"
           >
             Ver carta
           </button>
@@ -105,7 +105,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCartaModal }) => {
             target="_blank"
             rel="noopener noreferrer"
             title="Instagram de BETTER Bilbao"
-            className="w-9 h-9 rounded-full bg-primary hover:bg-primary-container text-on-primary flex items-center justify-center shrink-0 transition-transform duration-200 hover:scale-105 active:scale-98 shadow-xs"
+            className="hidden sm:flex w-9 h-9 rounded-full bg-primary hover:bg-primary-container text-on-primary items-center justify-center shrink-0 transition-transform duration-200 hover:scale-105 active:scale-98 shadow-xs"
           >
             <span className="material-symbols-outlined text-[19px]">photo_camera</span>
           </a>
@@ -114,7 +114,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCartaModal }) => {
             aria-label="Abrir menú móvil"
             aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg text-primary hover:bg-surface-container-high transition-colors focus:outline-none cursor-pointer"
+            className="lg:hidden p-1.5 sm:p-2 rounded-lg text-primary hover:bg-surface-container-high transition-colors focus:outline-none cursor-pointer"
             type="button"
           >
             <span className="material-symbols-outlined text-[26px]">
