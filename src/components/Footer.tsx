@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
                 </span>
               </div>
               <p className="font-body-md text-body-md text-surface-variant max-w-sm font-normal leading-relaxed text-sm">
-                Comida honesta, ingredientes frescos y cocina consciente en el corazón de Bilbao. Una propuesta gastronómica equilibrada inspirada en la vitalidad y el sabor de cada día.
+                Comida honesta, ingredientes frescos y cocina cercana en el corazón de Bilbao. Una propuesta gastronómica equilibrada inspirada en la vitalidad y el sabor de cada día.
               </p>
             </div>
             <div className="pt-2">
@@ -119,7 +119,7 @@ export const Footer: React.FC = () => {
               Propuesta
             </p>
             <p className="font-body-md text-body-md text-surface-variant leading-relaxed text-sm">
-              Cocina basada en producto fresco, variedad real, opciones vegetales y desayunos nutritivos.
+              Cocina basada en producto fresco, variedad real, opciones vegetales y desayunos preparados al momento.
             </p>
           </div>
 

@@ -7,16 +7,16 @@ interface ProductCategoriesProps {
 }
 
 export const ProductCategories: React.FC<ProductCategoriesProps> = ({ onSelectCategory }) => {
-  const { ref, isVisible } = useScrollReveal({ threshold: 0.1 });
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.08 });
 
   return (
-    <section id="carta" ref={ref} className="w-full py-24 px-6 lg:px-12 bg-surface">
+    <section id="carta" ref={ref} className="w-full py-20 sm:py-28 px-6 lg:px-12 bg-surface transition-colors duration-700">
       <div className="max-w-7xl mx-auto">
         
-        {/* Cabecera de la sección */}
+        {/* Cabecera de la sección con transición suave continua */}
         <div 
-          className={`max-w-3xl mb-16 transition-all duration-700 ease-out ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+          className={`max-w-3xl mb-16 transition-all duration-800 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-3'
           }`}
         >
           <div className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold mb-3">
@@ -26,34 +26,34 @@ export const ProductCategories: React.FC<ProductCategoriesProps> = ({ onSelectCa
             Hay muchas formas de comer BETTER.
           </h2>
           <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-            Desde primera hora de la mañana hasta la merienda y cena. Cuatro propuestas equilibradas preparadas a diario con producto fresco y sin artificios.
+            Desde primera hora de la mañana hasta la merienda. Cuatro propuestas equilibradas preparadas a diario con producto fresco y de temporada.
           </p>
         </div>
 
-        {/* Grid de 4 categorías equilibradas con entrada escalonada */}
+        {/* Grid de 4 categorías equilibradas con entrada escalonada y visible desde inicio */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {PRODUCT_CATEGORIES.map((cat, index) => (
             <div
               key={cat.id}
               onClick={() => onSelectCategory?.(cat)}
               style={{
-                transitionDelay: `${index * 120}ms`
+                transitionDelay: `${index * 80}ms`
               }}
-              className={`group flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 border border-surface-container cursor-pointer ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              className={`group flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-surface-container cursor-pointer ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-4'
               }`}
             >
-              {/* Imagen con badge y zoom ligero al hover */}
+              {/* Imagen con zoom ligero al hover */}
               <div className="relative aspect-[4/3] overflow-hidden bg-surface-container">
                 <img
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-106"
                   src={cat.image}
                   alt={cat.altText}
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 {cat.badge && (
-                  <span className="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase tracking-wider px-2.5 py-1 rounded-full font-semibold shadow-sm">
+                  <span className="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase tracking-wider px-2.5 py-1 rounded-full font-semibold shadow-xs">
                     {cat.badge}
                   </span>
                 )}

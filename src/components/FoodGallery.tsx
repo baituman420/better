@@ -4,16 +4,16 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export const FoodGallery: React.FC = () => {
   const { main, secondary } = EDITORIAL_GALLERY;
-  const { ref, isVisible } = useScrollReveal({ threshold: 0.1 });
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.08 });
 
   return (
-    <section id="espacio" ref={ref} className="w-full py-24 px-6 lg:px-12 bg-surface overflow-hidden">
+    <section id="espacio" ref={ref} className="w-full py-20 sm:py-28 px-6 lg:px-12 bg-surface overflow-hidden transition-colors duration-700">
       <div className="max-w-7xl mx-auto">
         
         {/* Encabezado editorial con animación */}
         <div 
-          className={`flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 transition-all duration-700 ease-out ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+          className={`flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 transition-all duration-800 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-3'
           }`}
         >
           <div>
@@ -43,13 +43,13 @@ export const FoodGallery: React.FC = () => {
           
           {/* Feature Principal (7 cols) con imagen real de mesa servida */}
           <div 
-            className={`lg:col-span-7 flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group border border-surface-container ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            className={`lg:col-span-7 flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group border border-surface-container ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-4'
             }`}
           >
             <div className="relative aspect-[16/10] overflow-hidden bg-surface-container">
               <img
-                className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-106"
+                className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-104"
                 src={main.image}
                 alt={main.altText}
                 loading="lazy"
@@ -85,14 +85,14 @@ export const FoodGallery: React.FC = () => {
             {secondary.map((item, index) => (
               <div
                 key={item.id}
-                style={{ transitionDelay: `${(index + 1) * 150}ms` }}
-                className={`flex-1 flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group border border-surface-container ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                style={{ transitionDelay: `${(index + 1) * 100}ms` }}
+                className={`flex-1 flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-500 group border border-surface-container ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-4'
                 }`}
               >
                 <div className="relative aspect-[16/9] overflow-hidden bg-surface-container">
                   <img
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-106"
                     src={item.image}
                     alt={item.altText}
                     loading="lazy"

@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCartaModal }) => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-500 ease-out ${
         isScrolled 
           ? 'bg-surface/95 backdrop-blur-md shadow-md border-b border-surface-container py-0' 
           : 'bg-surface/80 backdrop-blur-sm border-b border-surface-container/60 py-1'
@@ -95,7 +95,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCartaModal }) => {
                 handleNavClick("#carta");
               }
             }}
-            className="inline-flex items-center justify-center bg-primary-container text-surface hover:bg-tertiary active:scale-95 transition-all duration-200 px-5 sm:px-6 py-2.5 rounded-full font-label-md text-label-md uppercase tracking-wider shadow-[0_2px_10px_rgba(23,63,53,0.12)] hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
+            className="inline-flex items-center justify-center bg-primary-container text-surface hover:bg-tertiary active:scale-98 transition-all duration-200 px-5 sm:px-6 py-2.5 rounded-full font-label-md text-label-md uppercase tracking-wider shadow-[0_2px_10px_rgba(23,63,53,0.12)] hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
           >
             Ver carta
           </button>
@@ -105,7 +105,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCartaModal }) => {
             target="_blank"
             rel="noopener noreferrer"
             title="Instagram de BETTER Bilbao"
-            className="w-9 h-9 rounded-full bg-primary hover:bg-primary-container text-on-primary flex items-center justify-center shrink-0 transition-transform duration-200 hover:scale-105 active:scale-95 shadow-sm"
+            className="w-9 h-9 rounded-full bg-primary hover:bg-primary-container text-on-primary flex items-center justify-center shrink-0 transition-transform duration-200 hover:scale-105 active:scale-98 shadow-xs"
           >
             <span className="material-symbols-outlined text-[19px]">photo_camera</span>
           </a>

@@ -1,6 +1,6 @@
 # BETTER Bilbao — Web Demo
 
-Demo comercial navegable para el establecimiento de comida saludable y café **BETTER Bilbao** (Henao Kalea 2, Bilbao), basada fielmente en el diseño aprobado de **Google Stitch** y enriquecida con **fotografías reales del local y sus productos** y **animaciones fluidas**.
+Demo comercial navegable para el establecimiento de comida saludable y café **BETTER Bilbao** (Henao Kalea 2, Bilbao), basada fielmente en el diseño aprobado de **Google Stitch** y enriquecida con **fotografías reales del local y sus productos** y una **experiencia de transición visual continua y refinada**.
 
 🔗 **Demo en vivo en GitHub Pages**: [https://baituman420.github.io/better/](https://baituman420.github.io/better/)
 
@@ -9,12 +9,15 @@ Demo comercial navegable para el establecimiento de comida saludable y café **B
 ## 📸 Fotografías Reales Integradas
 
 Hemos incorporado una cuidada selección de fotografías del Instagram oficial de **BETTER Bilbao** organizadas en `public/images/`:
-- **Hero Principal**: Tostas artesanas con aguacate y salmón preparadas al momento en el establecimiento (`hero-dish.jpg`).
+- **Hero Principal**: Presentación fotográfica envolvente con fundido lento y continuo entre tres composiciones gastronómicas reales:
+  1. *Mesa BETTER*: Composición completa con bowl saludable, bocadillo en pan crujiente y zumos naturales (`hero-mesa.jpg`).
+  2. *Desayunos & Tostas*: Tostas con base crujiente, aguacate al punto y salmón (`hero-tostas.jpg`).
+  3. *Bowls de Temporada*: Fruta fresca cortada al momento con avena y semillas (`hero-bowls.jpg`).
 - **Categorías Gastronómicas**:
-  - *Tostas y desayunos*: Tostas de masa madre con aguacate y salmón (`cat-tostas.jpg`).
-  - *Bocadillos y focaccias*: Bocadillo con pan de semillas y vegetales frescos (`cat-bocadillos.jpg`).
+  - *Tostas y desayunos*: Tostas con aguacate fresco y salmón (`cat-tostas.jpg`).
+  - *Bocadillos y focaccias*: Bocadillo en pan con cereales y semillas con vegetales frescos (`cat-bocadillos.jpg`).
   - *Bowls y ensaladas*: Bowl saludable completo con base verde, atún y verduras (`cat-bowls.jpg`).
-  - *Bebidas y zumos*: Zumo verde natural preparado en frío (`cat-bebidas.jpg`).
+  - *Bebidas y zumos*: Zumo verde natural preparado en frío con manzana y espinacas (`cat-bebidas.jpg`).
 - **Nuestra Filosofía**: Vista de la sala interior de Henao 2 con sus clientes y ambiente acogedor (`filosofia-local.jpg`).
 - **Cultura Culinaria (Galería Editorial)**:
   - *Mesa servida*: Bandeja completa con bowl saludable, bocadillo y zumos naturales (`editorial-focaccia.jpg`).
@@ -23,16 +26,16 @@ Hemos incorporado una cuidada selección de fotografías del Instagram oficial d
 - **Visítanos (Henao 2)**:
   - Selector interactivo entre vista del *Interior* de la sala (`local-interior.jpg`) y la *Fachada exterior* en esquina (`local-fachada.jpg`).
 - **Comunidad Instagram (@better_restaurant)**:
-  - Mosaico de 4 publicaciones reales: desayunos con tosta y bowl de açaí, café y matcha paseando por Bilbao, cestas de fruta fresca en barra y formato take away.
+  - Mosaico de 4 publicaciones reales: desayunos con tosta y bowl de açaí, zumo paseando por Bilbao, cestas de fruta fresca en barra y formato take away.
 
 ---
 
-## ✨ Animaciones y Microinteracciones
+## ✨ Transición Visual Continua y Elegante
 
-- **Scroll Reveal progresivo**: Bloques de contenido y cuadrículas de productos que entran suavemente a medida que el usuario navega (`useScrollReveal` con `IntersectionObserver`).
-- **Hero suave**: Entrada escalonada de titular, pill de ubicación y botones de acción, con sutil movimiento flotante en el badge de fotografía real.
-- **Microinteracciones en tarjetas**: Efecto elevación (`hover:-translate-y-1.5`), zoom óptico ligero de imágenes (`group-hover:scale-105`) y transiciones de sombra.
-- **Navegación premium**: Header con detección de scroll dinámico (fondo translúcido con desenfoque `backdrop-blur`), indicador de subrayado sutil en enlaces y botón de acción directa.
+- **Experiencia de scroll orgánica**: Bloques de contenido visibles desde el inicio (sin pantallas en blanco ni esperas forzadas) que ganan presencia y definición con desplazamientos sutiles de 3-4px al hacer scroll.
+- **Hero con fundido lento**: Transición pausada de 1.2s entre composiciones gastronómicas, manteniendo siempre el foco en el titular «COMER BIEN. SABER MEJOR.».
+- **Badge comercial natural**: Mensaje informativo de "Variedad cotidiana" que resalta la propuesta culinaria del establecimiento.
+- **Navegación fluida**: Header con detección de scroll dinámico (fondo translúcido con desenfoque `backdrop-blur`), indicador de línea animado al pasar el ratón y respuesta háptica visual en botones.
 - **Accesibilidad y Respeto a `prefers-reduced-motion`**: Si el usuario tiene activada la reducción de movimiento en su sistema operativo, todas las animaciones se desactivan instantáneamente para garantizar máxima accesibilidad.
 
 ---
@@ -42,10 +45,10 @@ Hemos incorporado una cuidada selección de fotografías del Instagram oficial d
 BETTER es una propuesta gastronómica saludable y fresca ubicada en el Ensanche de Bilbao (Henao Kalea 2, junto a Plaza Ensanche y Jardines de Albia).
 
 Su oferta incluye:
-- **Tostas y desayunos**: Hogazas de masa madre, aguacate al punto, queso batido y semillas.
-- **Bocadillos y focaccias**: Panes artesanos, vegetales asados y quesos escogidos.
-- **Bowls y ensaladas**: Granos enteros, hojas frescas y aderezos caseros.
-- **Bebidas y zumos**: Zumos naturales, opciones botánicas, cafés e infusiones.
+- **Tostas y desayunos**: Tostas con aguacate al punto, semillas, huevo o salmón, preparadas al momento.
+- **Bocadillos y focaccias**: Panes crujientes con cereales y semillas, vegetales frescos y rellenos sabrosos.
+- **Bowls y ensaladas**: Granos selectos, hojas verdes de temporada y aderezos caseros.
+- **Bebidas y zumos**: Zumos naturales de fruta y verdura, batidos verdes e infusiones.
 
 ---
 
