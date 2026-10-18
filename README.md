@@ -1,8 +1,39 @@
 # BETTER Bilbao — Web Demo
 
-Demo comercial navegable para el establecimiento de comida saludable y café **BETTER Bilbao** (Henao Kalea 2, Bilbao), basada fielmente en el diseño aprobado creado en **Google Stitch**.
+Demo comercial navegable para el establecimiento de comida saludable y café **BETTER Bilbao** (Henao Kalea 2, Bilbao), basada fielmente en el diseño aprobado de **Google Stitch** y enriquecida con **fotografías reales del local y sus productos** y **animaciones fluidas**.
 
 🔗 **Demo en vivo en GitHub Pages**: [https://baituman420.github.io/better/](https://baituman420.github.io/better/)
+
+---
+
+## 📸 Fotografías Reales Integradas
+
+Hemos incorporado una cuidada selección de fotografías del Instagram oficial de **BETTER Bilbao** organizadas en `public/images/`:
+- **Hero Principal**: Tostas artesanas con aguacate y salmón preparadas al momento en el establecimiento (`hero-dish.jpg`).
+- **Categorías Gastronómicas**:
+  - *Tostas y desayunos*: Tostas de masa madre con aguacate y salmón (`cat-tostas.jpg`).
+  - *Bocadillos y focaccias*: Bocadillo con pan de semillas y vegetales frescos (`cat-bocadillos.jpg`).
+  - *Bowls y ensaladas*: Bowl saludable completo con base verde, atún y verduras (`cat-bowls.jpg`).
+  - *Bebidas y zumos*: Zumo verde natural preparado en frío (`cat-bebidas.jpg`).
+- **Nuestra Filosofía**: Vista de la sala interior de Henao 2 con sus clientes y ambiente acogedor (`filosofia-local.jpg`).
+- **Cultura Culinaria (Galería Editorial)**:
+  - *Mesa servida*: Bandeja completa con bowl saludable, bocadillo y zumos naturales (`editorial-focaccia.jpg`).
+  - *Bowls de fruta*: Fruta fresca cortada al momento con avena y semillas (`editorial-bowls.jpg`).
+  - *Bebidas*: Gama de zumos naturales de colores sobre la barra (`editorial-bebidas.jpg`).
+- **Visítanos (Henao 2)**:
+  - Selector interactivo entre vista del *Interior* de la sala (`local-interior.jpg`) y la *Fachada exterior* en esquina (`local-fachada.jpg`).
+- **Comunidad Instagram (@better_restaurant)**:
+  - Mosaico de 4 publicaciones reales: desayunos con tosta y bowl de açaí, café y matcha paseando por Bilbao, cestas de fruta fresca en barra y formato take away.
+
+---
+
+## ✨ Animaciones y Microinteracciones
+
+- **Scroll Reveal progresivo**: Bloques de contenido y cuadrículas de productos que entran suavemente a medida que el usuario navega (`useScrollReveal` con `IntersectionObserver`).
+- **Hero suave**: Entrada escalonada de titular, pill de ubicación y botones de acción, con sutil movimiento flotante en el badge de fotografía real.
+- **Microinteracciones en tarjetas**: Efecto elevación (`hover:-translate-y-1.5`), zoom óptico ligero de imágenes (`group-hover:scale-105`) y transiciones de sombra.
+- **Navegación premium**: Header con detección de scroll dinámico (fondo translúcido con desenfoque `backdrop-blur`), indicador de subrayado sutil en enlaces y botón de acción directa.
+- **Accesibilidad y Respeto a `prefers-reduced-motion`**: Si el usuario tiene activada la reducción de movimiento en su sistema operativo, todas las animaciones se desactivan instantáneamente para garantizar máxima accesibilidad.
 
 ---
 
@@ -15,8 +46,6 @@ Su oferta incluye:
 - **Bocadillos y focaccias**: Panes artesanos, vegetales asados y quesos escogidos.
 - **Bowls y ensaladas**: Granos enteros, hojas frescas y aderezos caseros.
 - **Bebidas y zumos**: Zumos naturales, opciones botánicas, cafés e infusiones.
-
-> **Nota de contenido verificado**: Los textos y datos se han configurado con tono neutro y verificado, reflejando fielmente la identidad del local en Henao 2 sin asumir datos no confirmados (como horarios concretos, teléfonos o precios cerrados).
 
 ---
 
@@ -33,40 +62,22 @@ Su oferta incluye:
 
 ## 🛠️ Instalación y Desarrollo Local
 
-1. **Clonar el repositorio**:
-   ```bash
-   git clone https://github.com/baituman420/better.git
-   cd better
-   ```
-
-2. **Instalar dependencias**:
+1. **Instalar dependencias**:
    ```bash
    npm install
    ```
 
-3. **Iniciar servidor de desarrollo**:
+2. **Iniciar servidor de desarrollo**:
    ```bash
    npm run dev
    ```
 
-4. **Compilar para producción**:
+3. **Compilar para producción**:
    ```bash
    npm run build
    ```
 
-5. **Previsualizar la compilación**:
+4. **Previsualizar la compilación**:
    ```bash
    npm run preview
    ```
-
----
-
-## 📱 Funcionalidades de la Demo
-
-- ✅ **Fidelidad visual total** al prototipo aprobado de Google Stitch.
-- ✅ **Navegación fluida por anclas** entre todas las secciones (*Inicio*, *Propuesta*, *Filosofía*, *Cultura Culinaria*, *Visítanos*).
-- ✅ **Menú responsive adaptable** para móviles, tabletas y ordenadores de sobremesa.
-- ✅ **Enlace interactivo a Google Maps** con las coordenadas de Henao 2, Bilbao.
-- ✅ **Conexión a Instagram** oficial `@better_restaurant`.
-- ✅ **Modal interactivo** de detalles para cada categoría de la carta.
-- ✅ **Ruta base `/better/`** para correcto funcionamiento de assets en GitHub Pages.
